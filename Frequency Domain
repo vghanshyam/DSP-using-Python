@@ -1,0 +1,100 @@
+# Frequency Domain Analysis
+
+This chapter introduces the **frequency domain** representation of signals and explains the fundamental mathematical tools used in Digital Signal Processing (DSP).
+
+---
+
+## 📘 Topics Covered
+
+### 1️⃣ Fourier Series
+- Representation of periodic signals as a sum of sinusoids
+- Decomposes a periodic signal into harmonic components
+- Useful for analyzing periodic waveforms
+
+---
+
+### 2️⃣ Fourier Transform (FT)
+- Converts a time-domain signal into its frequency-domain representation
+- Applicable to non-periodic signals
+- Reveals frequency content of signals
+
+---
+
+### 3️⃣ Fourier Transform Properties
+- Linearity  
+- Time shifting  
+- Frequency shifting  
+- Convolution property  
+- Parseval’s theorem  
+
+These properties simplify signal analysis and system design.
+
+---
+### 4️⃣ Fast Fourier Transform (FFT)
+
+- Efficient algorithm to compute the Discrete Fourier Transform (DFT)
+- Reduces computational complexity from:
+
+    O(N^2)  →  O(N log N)
+
+- Makes real-time DSP systems possible
+
+---
+
+### 5️⃣ Windowing
+- Used before FFT to reduce spectral leakage
+- Common window functions:
+  - Hamming
+  - Hanning
+  - Blackman
+  - Rectangular
+
+---
+
+### 6️⃣ Spectrogram
+- Time-frequency representation of a signal
+- Shows how frequency content changes over time
+- Useful for:
+  - Speech analysis
+  - Radar signal analysis
+  - Communication signals
+
+---
+## 🐍 Implementation
+All concepts in this chapter are demonstrated using **Python examples**, including:
+
+- Signal generation
+- FFT computation
+- Window application
+- Spectrogram plotting
+
+---
+# Fourier Series
+
+The basics of the frequency domain start with understanding that **any signal can be represented as a sum of sine waves**.
+
+When we break a signal down into its composite sine waves, this representation is called a **Fourier Series**.
+
+In simple terms:
+
+> A complex signal = sum of simple sine and cosine waves.
+
+---
+
+## 🔹 Key Idea
+
+If a signal is **periodic**, it can be expressed as a combination of:
+
+- A fundamental frequency  
+- Harmonics (integer multiples of the fundamental frequency)  
+
+Mathematically, a periodic signal can be written as:
+
+Where:
+
+- `ω` = Fundamental angular frequency  
+- `a_n`, `b_n` = Fourier coefficients  
+- `n` = Harmonic number  
+
+---
+
